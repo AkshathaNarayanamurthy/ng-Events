@@ -1,0 +1,9 @@
+<div>
+    <h1> Angular upcoming Events</h1>
+    <hr>
+    <div class="row" *ngFor= "let event of event1">
+    <event-thumbmail #thumbnail  [eventInput]="event" (eventOutput)="handledClickEvent($event)"></event-thumbmail>
+
+    </div>
+</div>
+<button class="btn btn-primary" (click)="thumbnail.logInfo()">Get Info</button>
